@@ -1,0 +1,17 @@
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\GL_CP_Users_WCFServiceTests.dll
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\GL_CP_Users_WCFServiceTests.pdb
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\GL_CP_Users_WCFService.dll
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\GL_CP_Users_WCFService.pdb
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\obj\Debug\GL_CP_Users_WCFServiceTests.csprojResolveAssemblyReference.cache
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\obj\Debug\GL_CP_Users_WCFServiceTests.dll
+D:\WORK\APP\CustomerPricing\WebServices\Users\GL_CP_Users_WCFServiceTests\obj\Debug\GL_CP_Users_WCFServiceTests.pdb
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\GL_CP_Users_WCFServiceTests.dll
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\GL_CP_Users_WCFServiceTests.pdb
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\ProductStore_Users_WCFService.dll
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\ProductStore_Users_WCFService.pdb
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\obj\Debug\GL_CP_Users_WCFServiceTests.csprojResolveAssemblyReference.cache
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\obj\Debug\GL_CP_Users_WCFServiceTests.dll
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFServiceTests\obj\Debug\GL_CP_Users_WCFServiceTests.pdb

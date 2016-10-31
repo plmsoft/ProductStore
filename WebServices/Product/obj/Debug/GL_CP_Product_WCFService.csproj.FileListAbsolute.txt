@@ -1,0 +1,9 @@
+D:\WORK\APP\CustomerPricing\WebServices\Product\bin\Debug\GL_CP_Product_WCFService.dll.config
+D:\WORK\APP\CustomerPricing\WebServices\Product\bin\Debug\GL_CP_Product_WCFService.dll
+D:\WORK\APP\CustomerPricing\WebServices\Product\bin\Debug\GL_CP_Product_WCFService.pdb
+D:\WORK\APP\CustomerPricing\WebServices\Product\bin\Debug\GL_CP_Customer_WCFService.dll
+D:\WORK\APP\CustomerPricing\WebServices\Product\bin\Debug\GL_CP_Customer_WCFService.pdb
+D:\WORK\APP\CustomerPricing\WebServices\Product\obj\Debug\GL_CP_Product_WCFService.csprojResolveAssemblyReference.cache
+D:\WORK\APP\CustomerPricing\WebServices\Product\obj\Debug\XsdGeneratedCode\GeneratedXsdTypes.cs
+D:\WORK\APP\CustomerPricing\WebServices\Product\obj\Debug\GL_CP_Product_WCFService.dll
+D:\WORK\APP\CustomerPricing\WebServices\Product\obj\Debug\GL_CP_Product_WCFService.pdb

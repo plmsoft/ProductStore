@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AnyPointObjects.ProductViewModel>
+@{
+    ViewData["Title"] = "Customer pricing";
+}
+
+<div>
+    <table class="table-condensed">
+        <tr>
+            <td>
+                <a href="~/Home/Index?pattern=*" class="btn btn-default">All Products</a>
+            </td>
+            <td>
+                <form asp-controller="Home" asp-action="Index" method="post" class="form-horizontal">
+                    <input name="pattern" class="text-left" />
+                    <input type="submit" class="btn btn-default" value="Filter" />
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+
+@if (!Model.Any())
+{
+    <hr />
+    <label class="control-label">There aren't any products</label>
+}
+else
+{
+<h3>Product List</h3>
+
+<table class="table">
+
+    <tr>
+        <th>Sku</th>
+        <th>Name</th>
+        <th>OriginalPrice</th>
+        <th>DiscountPrice</th>
+        <th>RRP</th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td colspan="6">&nbsp;</td>
+    </tr>
+
+    @foreach (var productItem in Model)
+    {
+        <tr>
+            <td>@productItem.Sku</td>
+            <td>@productItem.Name</td>
+            <td>@productItem.OriginalPrice</td>
+            <td>@productItem.DiscountPrice</td>
+            <td>@productItem.RRP</td>
+        </tr>
+    }
+</table>
+}

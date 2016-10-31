@@ -1,0 +1,12 @@
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\obj\Debug\CommonHost.csprojResolveAssemblyReference.cache
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\CommonHost.exe.config
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\CommonHost.exe
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\CommonHost.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Customer_WCFService.dll
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Product_WCFService.dll
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Users_WCFService.dll
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Customer_WCFService.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Product_WCFService.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Users_WCFService.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\obj\Debug\CommonHost.exe
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\obj\Debug\CommonHost.pdb

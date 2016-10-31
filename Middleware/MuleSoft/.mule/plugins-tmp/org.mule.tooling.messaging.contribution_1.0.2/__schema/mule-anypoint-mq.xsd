@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://www.mulesoft.org/schema/mule/anypoint-mq"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:mule="http://www.mulesoft.org/schema/mule/core"
+            xmlns:schemadoc="http://www.mulesoft.org/schema/mule/schemadoc"
+            xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
+            xmlns:http="http://www.mulesoft.org/schema/mule/http"
+            targetNamespace="http://www.mulesoft.org/schema/mule/anypoint-mq"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+    <xsd:include schemaLocation="http://www.mulesoft.org/schema/mule/messaging/3.7/mule-messaging.xsd"/>
+
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:import namespace="http://www.mulesoft.org/schema/mule/core"
+                schemaLocation="http://www.mulesoft.org/schema/mule/core/3.7/mule.xsd"/>
+    <xsd:import namespace = "http://www.mulesoft.org/schema/mule/schemadoc"
+                schemaLocation = "http://www.mulesoft.org/schema/mule/schemadoc/3.7/mule-schemadoc.xsd"/>
+    <xsd:import namespace="http://www.mulesoft.org/schema/mule/tls"
+                schemaLocation="http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd" />
+    <xsd:import namespace="http://www.mulesoft.org/schema/mule/http"
+                schemaLocation="http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd" />
+
+    <xsd:annotation>
+        <xsd:documentation>
+            Anypoint MQ Service.
+        </xsd:documentation>
+        <xsd:appinfo>
+            <schemadoc:short-name>Anypoint MQ</schemadoc:short-name>
+            <schemadoc:page-title>Anypoint MQ Module</schemadoc:page-title>
+        </xsd:appinfo>
+    </xsd:annotation>
+
+    <xsd:element name="config" substitutionGroup="abstract-config" type="anypointMqConfigType"/>
+    <xsd:complexType name="anypointMqConfigType">
+        <xsd:complexContent>
+            <xsd:extension base="abstractConfigType">
+                <xsd:sequence>
+                    <xsd:element ref="tls:context" minOccurs="0" maxOccurs="1" />
+                    <xsd:element ref="http:proxy" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="provider" type="anypointMqProviderType" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="prefetch" type="anypointMqPrefetchType" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="worker-threading-profile" type="mule:asynchronousThreadingProfileType" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+
+                <xsd:attribute name="acknowledgementTimeout" type="mule:substitutableLong" use="optional" default="120000">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Time a message will be hold by the broker waiting for an ack or nack. After that time period it will be available again to any subscriber.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+
+                <xsd:attribute name="mock" type="mule:substitutableBoolean" use="optional" default="false">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            If true provides a mock configuration to perform testing.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="earlyInitialization" type="mule:substitutableBoolean" use="optional" default="true">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            If false avoids to login into the broker at initialization time.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+
+                <xsd:attribute name="tlsContext-ref" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            A reference to a TlsContext configuration element. The HTTP client will use it to provider the broker.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="proxy-ref" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            A reference to a Proxy configuration element. The HTTP client will use it to provider the broker.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="provider-ref" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            A reference to a Provider configuration element. The connector will use it to gain provider to the broker.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="prefetch-ref" type="xsd:string" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            A reference to a Prefetch configuration element.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:element name="provider" substitutionGroup="mule:abstract-shared-extension" type="anypointMqProviderType"/>
+    <xsd:complexType name="anypointMqProviderType">
+        <xsd:complexContent>
+            <xsd:extension base="mule:abstractExtensionType">
+                <xsd:attribute name="name" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            The name of this provider definition, so that it can be referenced from other configuration elements.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="url" type="xsd:string" use="required" />
+                <xsd:attribute name="clientId" type="xsd:string" use="required" >
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            The Client Identifier to be used to authorize the connection.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="clientSecret" type="xsd:string" use="required" >
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            The Client Secret to be used to authorize the connection.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:element name="subscriber" substitutionGroup="abstract-subscriber" type="anypointMqSubscriberType" />
+    <xsd:complexType name="anypointMqSubscriberType">
+        <xsd:complexContent>
+            <xsd:extension base="abstractSubscriberType">
+                <xsd:sequence>
+                    <xsd:element name="prefetch" type="anypointMqPrefetchType" minOccurs="0" maxOccurs="1" />
+                </xsd:sequence>
+
+                <xsd:attribute name="acknowledgementTimeout" type="mule:substitutableLong" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Time a message will be hold by the broker waiting for an ack or nack. After that time period it will be available again to any subscriber.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="prefetch-ref" type="xsd:string" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            A reference to a Prefetch configuration element.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="contextVariableName" type="xsd:string" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            The name of the flow variable used to store the message contexts created by this subscriber.
+                            The message context should be used to ACK or NACK the message when the acknowledgementMode is set to manual.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="prefetch" substitutionGroup="mule:abstract-shared-extension" type="anypointMqPrefetchType"/>
+    <xsd:complexType name="anypointMqPrefetchType">
+        <xsd:complexContent>
+            <xsd:extension base="mule:abstractExtensionType">
+                <xsd:attribute name="name" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            The name of this prefetch definition, so that it can be referenced from other configuration elements.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+
+                <xsd:attribute name="fetchSize" type="mule:substitutableInt" use="optional" default="10">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Number of messages to receive at once when asking for messages. The response could contain less messages than this number depending of the poolingTime set.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="fetchTimeout" type="mule:substitutableLong" use="optional" default="1000">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Maximum time in milliseconds to wait for the required amount of messages. If this time is elapsed, the response will be sent with as many messages as taken during the period.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+
+                <xsd:attribute name="frequency" type="mule:substitutableLong" use="optional" default="5000" >
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Amount of milliseconds to execute the retrieve operation when the prefetch queue is not empty.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:element name="publish" substitutionGroup="abstract-publish" type="anypointMqPublishType" />
+    <xsd:complexType name="anypointMqPublishType">
+        <xsd:complexContent>
+            <xsd:extension base="abstractPublishType" />
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:element name="consume" substitutionGroup="mule:abstract-message-processor" type="anypointMqConsumeType" />
+    <xsd:complexType name="anypointMqConsumeType">
+        <xsd:complexContent>
+            <xsd:extension base="mule:abstractMessageProcessorType">
+                <xsd:attribute name="destination" type="xsd:string" use="required">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Destination to where the messages will be sent.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="config-ref" type="xsd:string" use="required">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            A reference to the configuration element for this consumer.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="acknowledgementMode" type="acknowledgementModes" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Acknowledge mode to use for the messages retrieved from this consumer.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="acknowledgementTimeout" type="mule:substitutableLong" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Time a message will be hold by the broker waiting for an ack or nack. After that time period it will be available again to any subscriber.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="contextVariableName" type="xsd:string" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            The name of the flow variable used to store the message contexts created by this consumer.
+                            The message context should be used to ACK or NACK the message when the acknowledgementMode is set to manual.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="pollingTime" type="mule:substitutableInt" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Amount of time the client will wait to satisfy the number of messages requested.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:element name="ack" substitutionGroup="mule:abstract-message-processor" type="anypointMqAckType" />
+    <xsd:element name="nack" substitutionGroup="mule:abstract-message-processor" type="anypointMqAckType" />
+    <xsd:complexType name="anypointMqAckType">
+        <xsd:complexContent>
+            <xsd:extension base="mule:abstractMessageProcessorType">
+                <!-- Allowing config-ref element due to a Studio limitation -->
+                <xsd:attribute name="config-ref" type="xsd:string" use="optional" />
+                <xsd:attribute name="contextVariableName" type="xsd:string" use="optional">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            The name of the flow variable used to retrieve the message context used by this processor.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+</xsd:schema>

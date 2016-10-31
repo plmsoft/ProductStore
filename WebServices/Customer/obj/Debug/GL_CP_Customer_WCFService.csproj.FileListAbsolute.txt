@@ -1,0 +1,6 @@
+D:\WORK\APP\CustomerPricing\WebServices\Customer\bin\Debug\GL_CP_Customer_WCFService.dll.config
+D:\WORK\APP\CustomerPricing\WebServices\Customer\bin\Debug\GL_CP_Customer_WCFService.dll
+D:\WORK\APP\CustomerPricing\WebServices\Customer\bin\Debug\GL_CP_Customer_WCFService.pdb
+D:\WORK\APP\CustomerPricing\WebServices\Customer\obj\Debug\GL_CP_Customer_WCFService.dll
+D:\WORK\APP\CustomerPricing\WebServices\Customer\obj\Debug\GL_CP_Customer_WCFService.pdb
+D:\WORK\APP\CustomerPricing\WebServices\Customer\obj\Debug\GL_CP_Customer_WCFService.csprojResolveAssemblyReference.cache

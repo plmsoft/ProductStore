@@ -1,0 +1,14 @@
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\WcfServicesHost.exe.config
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\WcfServicesHost.exe
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\WcfServicesHost.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Auth_WCFService.dll
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Product_WCFService.dll
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Users_WCFService.dll
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Customer_WCFService.dll
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Auth_WCFService.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Product_WCFService.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Users_WCFService.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\bin\Debug\GL_CP_Customer_WCFService.pdb
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\obj\Debug\WcfServicesHost.csprojResolveAssemblyReference.cache
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\obj\Debug\WcfServicesHost.exe
+E:\WORK\APP\.Net\CustomerPricing\WebServicesHosts\CommonHost\obj\Debug\WcfServicesHost.pdb

@@ -1,0 +1,294 @@
+INFO  2016-10-12 17:58:15,403 [main] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'proxying-a-soap-api'                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-10-12 17:58:15,587 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising RegistryBroker
+INFO  2016-10-12 17:58:15,717 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Starting discovery of extensions
+INFO  2016-10-12 17:58:15,879 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Discovered 1 extensions
+INFO  2016-10-12 17:58:15,879 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Registering extension validation (version 3.8)
+INFO  2016-10-12 17:58:15,939 [main] org.mule.config.spring.MuleArtifactContext: Refreshing org.mule.config.spring.MuleArtifactContext@1c98290c: startup date [Wed Oct 12 17:58:15 EEST 2016]; root of context hierarchy
+INFO  2016-10-12 17:58:18,003 [main] org.mule.config.spring.processors.NoDevkitInjectorProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+WARN  2016-10-12 17:58:19,725 [main] org.mule.module.ognl.expression.OgnlExpressionEvaluator: OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+INFO  2016-10-12 17:58:20,478 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\proxying-a-soap-api\queue-tx-log\tx1.log and D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\proxying-a-soap-api\queue-tx-log\tx2.log
+INFO  2016-10-12 17:58:20,508 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\proxying-a-soap-api\queue-xa-tx-log\tx1.log and D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\proxying-a-soap-api\queue-xa-tx-log\tx2.log
+INFO  2016-10-12 17:58:20,638 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising model: _muleSystemModel
+INFO  2016-10-12 17:58:20,638 [main] org.mule.construct.FlowConstructLifecycleManager: Initialising flow: main
+INFO  2016-10-12 17:58:20,638 [main] org.mule.exception.DefaultMessagingExceptionStrategy: Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@22da2fe6
+INFO  2016-10-12 17:58:20,658 [main] org.mule.processor.SedaStageLifecycleManager: Initialising service: main.stage1
+WARN  2016-10-12 17:58:20,868 [main] org.mule.transport.http.HttpConnector: HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead.
+INFO  2016-10-12 17:58:22,973 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising connector: connector.http.mule.default
+INFO  2016-10-12 17:58:23,104 [main] org.mule.config.spring.SpringXmlConfigurationBuilder: Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\apps\proxying-a-soap-api\soap-api-proxy.xml'}]"
+INFO  2016-10-12 17:58:23,104 [main] org.mule.config.builders.AutoConfigurationBuilder: Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\apps\proxying-a-soap-api\soap-api-proxy.xml'}]"
+INFO  2016-10-12 17:58:26,107 [main] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'proxying-a-soap-api'                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-10-12 17:58:26,107 [main] org.mule.util.queue.QueueXaResourceManager: Starting ResourceManager
+INFO  2016-10-12 17:58:26,107 [main] org.mule.util.queue.QueueXaResourceManager: Started ResourceManager
+INFO  2016-10-12 17:58:26,238 [main] org.mule.module.http.internal.listener.DefaultHttpListenerConfig: Listening for requests on http://localhost:8082
+INFO  2016-10-12 17:58:26,248 [main] org.mule.transport.http.HttpConnector: Connected: HttpConnector
+{
+  name=connector.http.mule.default
+  lifecycle=initialise
+  this=4d7cac24
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[http]
+  serviceOverrides=<none>
+}
+
+INFO  2016-10-12 17:58:26,248 [main] org.mule.transport.http.HttpConnector: Starting: HttpConnector
+{
+  name=connector.http.mule.default
+  lifecycle=initialise
+  this=4d7cac24
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[http]
+  serviceOverrides=<none>
+}
+
+INFO  2016-10-12 17:58:26,248 [main] org.mule.lifecycle.AbstractLifecycleManager: Starting connector: connector.http.mule.default
+INFO  2016-10-12 17:58:26,248 [main] org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-10-12 17:58:26,258 [main] org.mule.lifecycle.AbstractLifecycleManager: Starting model: _muleSystemModel
+INFO  2016-10-12 17:58:26,258 [main] org.mule.construct.FlowConstructLifecycleManager: Starting flow: main
+INFO  2016-10-12 17:58:26,268 [main] org.mule.processor.SedaStageLifecycleManager: Starting service: main.stage1
+INFO  2016-10-12 17:58:26,338 [main] org.mule.module.management.agent.WrapperManagerAgent: This JVM hasn't been launched by the wrapper, the agent will not run.
+INFO  2016-10-12 17:58:26,388 [main] org.mule.module.management.agent.AbstractJmxAgent: Registered Connector Service with name Mule.proxying-a-soap-api:type=Connector,name="connector.http.mule.default.1"
+INFO  2016-10-12 17:58:26,388 [main] org.mule.DefaultMuleContext: 
+**********************************************************************
+* Application: proxying-a-soap-api                                   *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+WARN  2016-10-12 17:59:00,670 [[proxying-a-soap-api].HTTP_Listener_Configuration.worker.01] org.apache.cxf.phase.PhaseInterceptorChain: Interceptor for {http://predic8.com/wsdl/shop/1/}ShopService has thrown exception, unwinding now
+java.lang.NullPointerException
+	at org.apache.cxf.staxutils.StaxUtils.toNextElement(StaxUtils.java:525) ~[cxf-api-2.7.15.jar:2.7.15]
+	at org.apache.cxf.databinding.stax.StaxDataBindingInterceptor.handleMessage(StaxDataBindingInterceptor.java:64) ~[cxf-rt-core-2.7.15.jar:2.7.15]
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:272) ~[cxf-api-2.7.15.jar:2.7.15]
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121) ~[cxf-api-2.7.15.jar:2.7.15]
+	at org.mule.module.cxf.CxfInboundMessageProcessor.sendThroughCxf(CxfInboundMessageProcessor.java:422) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.CxfInboundMessageProcessor.sendToDestination(CxfInboundMessageProcessor.java:296) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.CxfInboundMessageProcessor.process(CxfInboundMessageProcessor.java:161) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.config.FlowConfiguringMessageProcessor.process(FlowConfiguringMessageProcessor.java:49) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:102) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.DynamicPipelineMessageProcessor.process(DynamicPipelineMessageProcessor.java:55) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:80) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:74) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:58) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:52) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.processBlocking(AbstractRequestResponseMessageProcessor.java:56) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:80) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:74) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:50) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:74) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:22) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:66) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:61) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.AbstractPipeline$3.process(AbstractPipeline.java:233) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.HttpMessageProcessorTemplate.routeEvent(HttpMessageProcessorTemplate.java:73) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:72) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:58) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:35) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:69) ~[mule-core-3.8.1.jar:3.8.1]
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:187) ~[mule-module-throttling-ee-3.8.1.jar:3.8.1]
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:58) ~[mule-module-throttling-ee-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65) ~[mule-core-3.8.1.jar:3.8.1]
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:93) ~[gateway-core-3.8.1.jar:3.8.1]
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:49) ~[gateway-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:113) ~[mule-module-cors-gw-3.8.1.jar:3.8.1]
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:40) ~[mule-module-cors-gw-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.process(PhaseExecutionEngine.java:114) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine.process(PhaseExecutionEngine.java:41) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MuleMessageProcessingManager.processMessage(MuleMessageProcessingManager.java:32) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.DefaultHttpListener$1.handleRequest(DefaultHttpListener.java:133) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.grizzly.GrizzlyRequestDispatcherFilter.handleRead(GrizzlyRequestDispatcherFilter.java:83) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.run0(ExecutorPerServerAddressIOStrategy.java:102) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.access$100(ExecutorPerServerAddressIOStrategy.java:30) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy$WorkerThreadRunnable.run(ExecutorPerServerAddressIOStrategy.java:125) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_101]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_101]
+WARN  2016-10-12 17:59:12,839 [[proxying-a-soap-api].HTTP_Listener_Configuration.worker.01] org.apache.cxf.phase.PhaseInterceptorChain: Interceptor for {http://predic8.com/wsdl/shop/1/}ShopService has thrown exception, unwinding now
+java.lang.NullPointerException
+	at org.apache.cxf.staxutils.StaxUtils.toNextElement(StaxUtils.java:525) ~[cxf-api-2.7.15.jar:2.7.15]
+	at org.apache.cxf.databinding.stax.StaxDataBindingInterceptor.handleMessage(StaxDataBindingInterceptor.java:64) ~[cxf-rt-core-2.7.15.jar:2.7.15]
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:272) ~[cxf-api-2.7.15.jar:2.7.15]
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121) ~[cxf-api-2.7.15.jar:2.7.15]
+	at org.mule.module.cxf.CxfInboundMessageProcessor.sendThroughCxf(CxfInboundMessageProcessor.java:422) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.CxfInboundMessageProcessor.sendToDestination(CxfInboundMessageProcessor.java:296) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.CxfInboundMessageProcessor.process(CxfInboundMessageProcessor.java:161) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.config.FlowConfiguringMessageProcessor.process(FlowConfiguringMessageProcessor.java:49) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:102) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.DynamicPipelineMessageProcessor.process(DynamicPipelineMessageProcessor.java:55) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:58) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:52) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.processBlocking(AbstractRequestResponseMessageProcessor.java:56) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:108) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.AbstractPipeline$3.process(AbstractPipeline.java:233) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.HttpMessageProcessorTemplate.routeEvent(HttpMessageProcessorTemplate.java:73) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:72) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:59) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:58) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:35) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:69) ~[mule-core-3.8.1.jar:3.8.1]
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:187) ~[mule-module-throttling-ee-3.8.1.jar:3.8.1]
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:58) ~[mule-module-throttling-ee-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65) ~[mule-core-3.8.1.jar:3.8.1]
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:93) ~[gateway-core-3.8.1.jar:3.8.1]
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:49) ~[gateway-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:113) ~[mule-module-cors-gw-3.8.1.jar:3.8.1]
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:40) ~[mule-module-cors-gw-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.process(PhaseExecutionEngine.java:114) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.PhaseExecutionEngine.process(PhaseExecutionEngine.java:41) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.execution.MuleMessageProcessingManager.processMessage(MuleMessageProcessingManager.java:32) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.DefaultHttpListener$1.handleRequest(DefaultHttpListener.java:133) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.grizzly.GrizzlyRequestDispatcherFilter.handleRead(GrizzlyRequestDispatcherFilter.java:83) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112) ~[grizzly-framework-2.3.25.jar:2.3.25]
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.run0(ExecutorPerServerAddressIOStrategy.java:102) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.access$100(ExecutorPerServerAddressIOStrategy.java:30) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy$WorkerThreadRunnable.run(ExecutorPerServerAddressIOStrategy.java:125) ~[mule-module-http-3.8.1.jar:3.8.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_101]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_101]

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration_Product" host="0.0.0.0" port="${http.portProduct}" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration_Auth" host="0.0.0.0" port="${http.portAuth}" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration_Customer" host="0.0.0.0" port="${http.portCustomer}" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration_User" host="0.0.0.0" port="${http.portUser}" doc:name="HTTP Listener Configuration"/>
+    <http:request-config name="HTTP_Request_ProductWebService" host="localhost" port="8797" doc:name="HTTP Request Configuration"/>
+    <http:request-config name="HTTP_Request_CustomerWebService" host="localhost" port="8796" doc:name="HTTP Request Configuration"/>
+    <http:request-config name="HTTP_Request_AuthWebService" host="localhost" port="8795" doc:name="HTTP Request Configuration"/>
+    <http:request-config name="HTTP_Request_UserWebService" host="localhost" port="8798" doc:name="HTTP Request Configuration"/>
+    
+    <flow name="AuthFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration_Auth" path="/*" doc:name="HTTP"/>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+        <http:request config-ref="HTTP_Request_AuthWebService" path="#[message.inboundProperties['http.request.uri']]" method=" #[message.inboundProperties['http.method']]" doc:name="HTTP"/>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+    </flow>
+    <flow name="CustomerFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration_Customer" path="/*" doc:name="HTTP"/>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+        <http:request config-ref="HTTP_Request_CustomerWebService" path="#[message.inboundProperties['http.request.uri']]" method=" #[message.inboundProperties['http.method']]" doc:name="HTTP"/>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+    </flow>
+    <flow name="ProductFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration_Product" path="/*" doc:name="HTTP"/>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+        <logger level="INFO" doc:name="Logger"/>
+        <http:request config-ref="HTTP_Request_ProductWebService" path="#[message.inboundProperties['http.request.uri']]" method="#[message.inboundProperties['http.method']]" doc:name="HTTP"/>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+    </flow>
+    <flow name="UserFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration_User" path="/*" doc:name="HTTP">
+        	<http:error-response-builder statusCode="#[errorStatusCode]" reasonPhrase="#[errorReasonPhrase]"/>
+        </http:listener>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+        <http:request config-ref="HTTP_Request_UserWebService" path="#[message.inboundProperties['http.request.uri']]" method="#[message.inboundProperties['http.method']]" doc:name="HTTP"/>
+        <flow-ref doc:name="copy-headers" name="copy-headers"/>
+		<catch-exception-strategy doc:name="Catch Exception Strategy" enableNotifications="false">
+               <remove-variable variableName="errorStatusCode"  doc:name="Set status code"/>
+               <set-variable variableName="errorReasonPhrase" value="Not Found" doc:name="Set reason phrase"/>
+        </catch-exception-strategy>
+    </flow>
+    
+    <sub-flow  name="copy-headers">
+        <copy-properties doc:name="Copy All HTTP Headers" propertyName="*"/>
+        <remove-property doc:name="Remove Content Length" propertyName="Content-Length"/>
+        <remove-property doc:name="Remove MULE Properties" propertyName="MULE_*"/>        
+        <remove-property doc:name="Remove X_MULE Properties" propertyName="X_MULE*"/>
+    </sub-flow>    
+
+</mule>

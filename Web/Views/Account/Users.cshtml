@@ -1,0 +1,37 @@
+﻿@model IEnumerable<AnyPointObjects.UserViewModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h3>@ViewData["Title"]</h3>
+
+
+<table class="table">
+    <tr>
+        <td colspan="2">
+        <a asp-controller="Account" asp-action="UserEdit" asp-route-id="0">New User</a>
+        </td>
+    </tr>
+    <tr>
+        <th>UserName</th>
+        <th colspan="1">Action</th>
+    </tr>
+    @foreach (var userItem in Model)
+    {
+        <tr>
+            <td>@userItem.UserName</td>
+            <td>
+                @if (userItem.ID != 1)
+                {
+                    <a asp-controller="Account" asp-action="UserEdit" asp-route-id="@userItem.ID" asp-route-name="@userItem.UserName" asp-route-password="@userItem.Password" >Change</a>
+                    <a asp-controller="Account" asp-action="UserDelete" asp-route-id="@userItem.ID" onclick="return confirm('Are you sure?')">Delete</a>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+

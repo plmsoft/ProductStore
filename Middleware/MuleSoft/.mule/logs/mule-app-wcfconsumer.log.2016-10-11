@@ -1,0 +1,79 @@
+INFO  2016-10-11 12:46:51,407 [main] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'wcfconsumer'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-10-11 12:46:51,888 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising RegistryBroker
+INFO  2016-10-11 12:46:52,098 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Starting discovery of extensions
+INFO  2016-10-11 12:46:52,328 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Discovered 1 extensions
+INFO  2016-10-11 12:46:52,328 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Registering extension validation (version 3.8)
+INFO  2016-10-11 12:46:52,538 [main] org.mule.config.spring.MuleArtifactContext: Refreshing org.mule.config.spring.MuleArtifactContext@7c22d4f: startup date [Tue Oct 11 12:46:52 EEST 2016]; root of context hierarchy
+INFO  2016-10-11 12:46:55,800 [main] org.mule.config.spring.processors.NoDevkitInjectorProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+WARN  2016-10-11 12:46:59,406 [main] org.mule.module.ognl.expression.OgnlExpressionEvaluator: OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+INFO  2016-10-11 12:47:00,332 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\wcfconsumer\queue-tx-log\tx1.log and D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\wcfconsumer\queue-tx-log\tx2.log
+INFO  2016-10-11 12:47:00,392 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\wcfconsumer\queue-xa-tx-log\tx1.log and D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\.\.mule\wcfconsumer\queue-xa-tx-log\tx2.log
+INFO  2016-10-11 12:47:00,432 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising connector: connector.file.mule.default
+INFO  2016-10-11 12:47:00,703 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising model: _muleSystemModel
+INFO  2016-10-11 12:47:00,703 [main] org.mule.construct.FlowConstructLifecycleManager: Initialising flow: wcfconsumerFlow1
+INFO  2016-10-11 12:47:00,703 [main] org.mule.exception.DefaultMessagingExceptionStrategy: Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@595f9916
+INFO  2016-10-11 12:47:00,835 [main] org.mule.processor.SedaStageLifecycleManager: Initialising service: wcfconsumerFlow1.stage1
+INFO  2016-10-11 12:47:00,855 [main] org.mule.component.ComponentLifecycleManager: Initialising component: component.100048427
+INFO  2016-10-11 12:47:02,758 [main] org.mule.config.spring.SpringXmlConfigurationBuilder: Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\apps\wcfconsumer\wcfconsumer.xml'}]"
+INFO  2016-10-11 12:47:02,758 [main] org.mule.config.builders.AutoConfigurationBuilder: Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\.mule\apps\wcfconsumer\wcfconsumer.xml'}]"
+INFO  2016-10-11 12:47:05,837 [main] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'wcfconsumer'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-10-11 12:47:05,837 [main] org.mule.util.queue.QueueXaResourceManager: Starting ResourceManager
+INFO  2016-10-11 12:47:05,837 [main] org.mule.util.queue.QueueXaResourceManager: Started ResourceManager
+INFO  2016-10-11 12:47:05,987 [main] org.mule.module.http.internal.listener.DefaultHttpListenerConfig: Listening for requests on http://localhost:8082/submitOrder
+INFO  2016-10-11 12:47:05,997 [main] org.mule.transport.file.FileConnector: Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=24134cbc
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+INFO  2016-10-11 12:47:05,997 [main] org.mule.transport.file.FileConnector: Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=24134cbc
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+INFO  2016-10-11 12:47:05,997 [main] org.mule.lifecycle.AbstractLifecycleManager: Starting connector: connector.file.mule.default
+INFO  2016-10-11 12:47:05,997 [main] org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-10-11 12:47:05,997 [main] org.mule.lifecycle.AbstractLifecycleManager: Starting model: _muleSystemModel
+INFO  2016-10-11 12:47:05,997 [main] org.mule.construct.FlowConstructLifecycleManager: Starting flow: wcfconsumerFlow1
+INFO  2016-10-11 12:47:06,007 [main] org.mule.processor.SedaStageLifecycleManager: Starting service: wcfconsumerFlow1.stage1
+INFO  2016-10-11 12:47:06,007 [main] org.mule.component.ComponentLifecycleManager: Starting component: component.100048427
+INFO  2016-10-11 12:47:06,087 [main] org.mule.module.management.agent.WrapperManagerAgent: This JVM hasn't been launched by the wrapper, the agent will not run.
+INFO  2016-10-11 12:47:06,117 [main] org.mule.module.management.agent.AbstractJmxAgent: Registered Connector Service with name Mule.wcfconsumer:type=Connector,name="connector.file.mule.default.1"
+INFO  2016-10-11 12:47:06,127 [main] org.mule.DefaultMuleContext: 
+**********************************************************************
+* Application: wcfconsumer                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+INFO  2016-10-11 12:47:48,062 [[wcfconsumer].HTTP_Listener_Configuration.worker.01] org.mule.lifecycle.AbstractLifecycleManager: Initialising: 'connector.file.mule.default.dispatcher.1292166560'. Object is: FileMessageDispatcher
+INFO  2016-10-11 12:47:48,083 [[wcfconsumer].HTTP_Listener_Configuration.worker.01] org.mule.lifecycle.AbstractLifecycleManager: Starting: 'connector.file.mule.default.dispatcher.1292166560'. Object is: FileMessageDispatcher
+INFO  2016-10-11 12:47:48,092 [[wcfconsumer].HTTP_Listener_Configuration.worker.01] org.mule.transport.file.FileConnector: Writing file to: D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\wcfconsumer\src\test\resources\c47ed960-8f97-11e6-bde5-2eb820524153.dat
+INFO  2016-10-11 12:53:23,086 [[wcfconsumer].HTTP_Listener_Configuration.worker.01] org.mule.transport.file.FileConnector: Writing file to: D:\WORK\APP\CustomerPricing\Middleware\MuleSoft\wcfconsumer\src\test\resources\8c2a9260-8f98-11e6-bde5-2eb820524153.dat

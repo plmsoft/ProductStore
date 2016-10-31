@@ -1,0 +1,5 @@
+authenticated.users=[{"token"\:"7fb83e85-869e-46d8-bc66-06e979c4b6d9","userId"\:"Yurii_Malkov","refreshToken"\:""}]
+current.token=7fb83e85-869e-46d8-bc66-06e979c4b6d9
+current.user=Yurii_Malkov
+eclipse.preferences.version=1
+org.mule.tooling.amc.apps={"userProjectMap"\:{"Yurii_Malkov"\:{"customerpricing"\:"{\\"applicationName\\"\:\\"customerpricing\\",\\"muleRuntime\\"\:\\"3.8.2\\",\\"properties\\"\:{}}","wcfconsumer"\:"{\\"applicationName\\"\:\\"wcfconsumer\\",\\"muleRuntime\\"\:\\"3.8.2\\",\\"properties\\"\:{\\"anypoint.platform.analytics_base_uri\\"\:\\"https\://analytics-ingest.anypoint.mulesoft.com\\",\\"anypoint.platform.client_id\\"\:\\"6d7f3ae120b7440a951d2f654df9c2f2\\",\\"anypoint.platform.coreservice_base_uri\\"\:\\"https\://anypoint.mulesoft.com/accounts\\",\\"anypoint.platform.client_secret\\"\:\\"60c1db42f5ad477f8C3AFF18BE8933D1\\",\\"anypoint.platform.platform_base_uri\\"\:\\"https\://anypoint.mulesoft.com/apiplatform\\",\\"httpSoap.port\\"\:\\"57565\\",\\"anypoint.platform.contracts_base_uri\\"\:\\"https\://anypoint.mulesoft.com/apigateway/ccs\\"}}"}}}

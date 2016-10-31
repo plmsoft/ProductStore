@@ -1,0 +1,6 @@
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFService\bin\Debug\ProductStore_Users_WCFService.dll.config
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFService\bin\Debug\ProductStore_Users_WCFService.dll
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFService\bin\Debug\ProductStore_Users_WCFService.pdb
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFService\obj\Debug\ProductStore_Users_WCFService.csprojResolveAssemblyReference.cache
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFService\obj\Debug\ProductStore_Users_WCFService.dll
+E:\WORK\APP\.Net\ProductStore\WebServices\Users\GL_CP_Users_WCFService\obj\Debug\ProductStore_Users_WCFService.pdb
