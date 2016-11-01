@@ -1,5 +1,5 @@
 # ProductStore
-Consuming .NET WCF REST web services from Mule Anypoint Platform
+Consuming .NET WCF REST web services from MuleSoft Anypoint Platform
 
 Deploy: 1. Rebuild projects
 
